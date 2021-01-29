@@ -1,2 +1,2 @@
 # jabboapi
-http://jabbo.eu/ NodeJS MySQL VueJS CMS
+http://jabbo.eu/ NodeJS Express MySQL API
