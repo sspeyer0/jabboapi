@@ -1,0 +1,179 @@
+<!--
+ API Documentation HTML Template  - 1.0.1
+ Copyright © 2016 Florian Nicolas
+ Licensed under the MIT license.
+ https://github.com/ticlekiwi/API-Documentation-HTML-Template
+ !-->
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Jabbo API - Documentation</title>
+    <meta name="description" content="Jabbo API Documentation">
+    <meta name="author" content="Sple">
+    <meta name="keywords" content="jabbo, api, documentation">
+
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <meta https-equiv="cleartype" content="on">
+    <meta https-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/hightlightjs-dark.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,500|Source+Code+Pro:300" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+<div class="left-menu">
+    <div class="content-logo">
+        <img alt="platform by Emily van den Heever from the Noun Project" title="platform by Emily van den Heever from the Noun Project" src="images/logo.png" height="32" />
+        <span>API Documentations</span>
+    </div>
+    <div class="content-menu">
+        <ul>
+
+            <li class="scroll-to-link active" data-target="get-started">
+                <a>Informations</a>
+            </li>
+
+            <li class="scroll-to-link" data-target="get-characters">
+                <a>/getAvatarByUsername</a>
+            </li>
+
+            <li class="scroll-to-link" data-target="errors">
+                <a>Erreurs</a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<div class="content-page">
+    <div class="content-code"></div>
+    <div class="content">
+
+        <div class="overflow-hidden content-section" id="content-get-started">
+            <h1 id="get-started">Informations</h1>
+
+            <pre>
+              Jabbo API documentation & endpoint
+
+                  <a href="https://api.jabbo.eu/">https://api.jabbo.eu/</a>
+            </pre>
+            <pre>
+              <code class="bash">
+                # Exemple d'utilisation sur Javascript
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed  eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              </code>
+              <code class="bash">
+                # Exemple d'utilisation sur PHP
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed  eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              </code>
+            </pre>
+
+            <p>
+                L'API de <b>Jabbo</b> vous permettent d'écrire et de lire les données de la base de donnée de <a href="https://jabbo.eu/">https://jabbo.eu/</a>. Afficher les articles, vérifier les informations de connexion, retrouver un joueur etc ...
+            </p>
+            <p>
+                Pour utiliser certaine fonction de cette API, vous aurais besoins d'une <b>clé d'identification secrète</b>. Seul les développeur de <a href="https://jabbo.eu/">https://jabbo.eu/</a> possèdents une <b>clef secrète</b>. <i>Tous partage d'une clé d'identification secrète sera sanctionné.</i>
+            </p>
+        </div>
+
+        <div class="overflow-hidden content-section" id="content-get-characters">
+            <h2 id="get-characters" style="text-transform: none;">/getAvatarByUsername</h2>
+            <p>
+                Pour récuperer un avatar avec un nom d'utilisateur, faire une requête POST sur l'adresse suivante:<br>
+                <code class="higlighted"><a href="https://api.jabbo.eu/getAvatarByUsername">https://api.jabbo.eu/getAvatarByUsername</a></code>
+            </p>
+            <br>
+            <pre>
+              Exemple d'utilisation:
+
+              Requête POST avec les données suivantes sur le lien <br> <a href="https://api.jabbo.eu/getAvatarByUsername">https://api.jabbo.eu/getAvatarByUsername</a>:
+              <code class="json">
+              {
+                username: "Sple"
+              }
+              </code>
+
+              Résultat de la requête:
+              
+              <code class="json">
+              {
+                avatar: "fa-1212-62.hr-3163-37.ca-1813-62.hd-190-1.wa-2001-62.ch-255-br100.lg-3057-81.he-1607-62.ha-3488-62.ea-6136543-62"
+              }
+              </code>
+            </pre>
+            <h4>PARAMETRES</h4>
+            <table>
+                <thead>
+                <tr>
+                    <th>Champ</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>username</td>
+                    <td>String</td>
+                    <td>Nom d'utilisateur du joueur</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="overflow-hidden content-section" id="content-errors">
+            <h2 id="errors">Erreurs</h2>
+            <pre>
+              Exemple:
+
+              Requête POST avec aucunes données sur le lien <br> <a href="https://api.jabbo.eu/getAvatarByUsername">https://api.jabbo.eu/getAvatarByUsername</a>:
+
+              Résultat de la requête:
+              <code class="json">
+              {
+                error: "ERR000"
+              }
+              </code>
+            </pre>
+            <p>
+                L'API de <a href="https://jabbo.eu/">https://jabbo.eu/</a> utilise un système de code erreur pour aider les développeurs dans son utilisation.
+            </p>
+            <table>
+                <thead>
+                <tr>
+                    <th>Code erreur</th>
+                    <th>Signification</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>ERR000</td>
+                    <td>
+                        Certains paramètres sont manquants.
+                    </td>
+                </tr>
+                <tr>
+                    <td>ERR001</td>
+                    <td>
+                        <code class="higlighted">Clé secrète</code> invalide.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="content-code"></div>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
