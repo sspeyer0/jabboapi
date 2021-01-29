@@ -1,5 +1,5 @@
 {
-  "name": "jabbo-api",
+  "name": "jabboapi",
   "version": "1.0.0",
   "description": "Jabbo NodeJS API for CMS",
   "main": "api.js",

@@ -43,12 +43,6 @@ sql.connect(function(err) {
   }
  
   console.log("Connecté au serveur MySQL avec l'ID #" + sql.threadId);
-
-  sql.query('SELECT 1', function (error, results, fields) {
-    if (error) throw error;
-    
-    console.log(results);
-  });
 });
 
 app.use(express.static('public'));
